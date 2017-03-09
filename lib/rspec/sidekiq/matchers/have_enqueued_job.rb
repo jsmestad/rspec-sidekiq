@@ -6,7 +6,7 @@ module RSpec
       end
 
       if Gem::Dependency.new('rspec-rails', '>= 3.4.0').matching_specs.max_by(&:version)
-        warn "[DEPRECATION] `have_enqueued_job` is deprecated.  Please use `have_enqueued_sidekiq_job` instead."
+        # warn "[DEPRECATION] `have_enqueued_job` is deprecated.  Please use `have_enqueued_sidekiq_job` instead."
         alias have_enqueued_sidekiq_job have_enqueued_job
       end
 
